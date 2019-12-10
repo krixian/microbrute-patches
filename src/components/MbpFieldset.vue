@@ -3,11 +3,18 @@
         <h1 class="mbp-fieldset__heading">
             <span class="mbp-fieldset__heading-text" v-text="label" />
         </h1>
+
+        <mbp-dial />
     </fieldset>
 </template>
 
 <script>
+import MbpDial from "./MbpDial";
 export default {
+    components: {
+        MbpDial,
+    },
+
     props: {
         label: String,
     }
@@ -39,7 +46,8 @@ export default {
     &__heading-text {
         background: #fff;
         border-radius: 0 0 @border-radius @border-radius;
-        display: inline-block;
+        color: @text-color-dark;
+        display: inline-block; 
         padding: .2rem 1.2rem;
     }
 }
